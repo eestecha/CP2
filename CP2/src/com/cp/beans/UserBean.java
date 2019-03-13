@@ -19,15 +19,15 @@ public class UserBean implements Serializable {
 
 	public String login() {
 
-		String result;
+		String forward;	// Cadena de texto para navigation-rule en "faces-config.xml"
 
 		if (name.length() > 0 && password.length() > 0) {
-			result = "welcome";
+			forward = "welcome";
 		} else {
-			result = "login";
+			forward = "login";
 		}
 
-		return result;
+		return forward;
 	}
 
 	public String getName() {
