@@ -10,7 +10,7 @@
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
-		<from-view-id>index.xhtml</from-view-id>
+		<from-view-id>/index.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>welcome</from-outcome>
 			<to-view-id>/views/bienvenido.xhtml</to-view-id>
