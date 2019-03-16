@@ -4,13 +4,13 @@ package com.cp.mo_modo.actions;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionForm;
+//import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
+import com.cp._comun.ActionForm;
 import com.cp._comun.ConfigPantalla;
 import com.cp._comun.StExcepcion;
 import com.cp._comun.Subrutinas;
@@ -20,7 +20,7 @@ import com.cp.mo_modo.forms.MoRCD_AF;
 
 import net.sf.json.JSONObject;
 
-public class MoEDTRCD_A extends Action {
+public class MoEDTRCD_A { //extends Action {
 	
 	public ActionForward execute(ActionMapping mapping, ActionForm  form,
 			HttpServletRequest request, HttpServletResponse response)
@@ -52,7 +52,7 @@ public class MoEDTRCD_A extends Action {
 			resultado = "ERROR";
 			ActionMessages errores = new ActionMessages();
 			errores.add("error", new ActionMessage( "errors.detail", "'" + usuario + "' no autorizado a '" + proceso + "'." ));
-			saveErrors(request,errores);
+//			saveErrors(request,errores);
 
 			if (isVersionAngular) { Subrutinas.returnActionVersionAngular(request, response, this, false, null); return null; } // No navega con struts
 
@@ -146,7 +146,7 @@ public class MoEDTRCD_A extends Action {
 				resultado = "ERROR";
 				ActionMessages errores = new ActionMessages();
 				errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
-				saveErrors(request,errores);
+//				saveErrors(request,errores);
 			}
 			if (registro != null ) {
 				pantalla.copyFrom( registro );
@@ -261,8 +261,8 @@ public class MoEDTRCD_A extends Action {
 		
 	
 		///////////////////////////////////////////
-		if ( errores.size() > 0 )
-			saveErrors(request,errores);
+//		if ( errores.size() > 0 )
+//			saveErrors(request,errores);
 		///////////////////////////////////////////
 		return resultado;
 	}
@@ -283,7 +283,7 @@ public class MoEDTRCD_A extends Action {
 				resultado = "ERROR";
 				ActionMessages errores = new ActionMessages();
 				errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
-				saveErrors(request,errores);
+//				saveErrors(request,errores);
 			}
 		}
 		///////////////////////////////////////////
@@ -306,7 +306,7 @@ public class MoEDTRCD_A extends Action {
 				resultado = "ERROR";
 				ActionMessages errores = new ActionMessages();
 				errores.add("error", new ActionMessage( "errors.detail", ex.getMessage() ));
-				saveErrors(request,errores);
+//				saveErrors(request,errores);
 			}
 		}
 		///////////////////////////////////////////

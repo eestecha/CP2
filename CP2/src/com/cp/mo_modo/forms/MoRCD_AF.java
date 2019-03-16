@@ -1,11 +1,6 @@
 package com.cp.mo_modo.forms;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
-
+import com.cp._comun.ActionForm;
 import com.cp._comun.StBean;
 import com.cp.mo_modo.bean.MoBean;
 import com.cp.mo_modo.bean.MoBeanFiltro;
@@ -51,10 +46,6 @@ public class MoRCD_AF extends ActionForm {
                 grid[i] = new MoBean();
             }
         }
-    }
-    
-    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-        return null;
     }
     
     public void copyTo(StBean beanDestino) {

@@ -1,9 +1,11 @@
 package com.cp.beans;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +25,28 @@ public class UserBean implements Serializable {
 
 	private String name = "";
 	private String password = "";
+	
+	private int favNumber1 = 0;
 
+	public int getFavNumber1() {
+		return favNumber1;
+	}
+
+	public void setFavNumber1(int favNumber1) {
+		this.favNumber1 = favNumber1;
+	}
+
+	
+	
+	/////////////////////////////////////////////
+	public void doSomething() throws IOException {
+	    ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+	    ec.getFlash().put("msg", "Something was done successfully");
+	    ec.redirect("view.xhtml#msg");
+	}
+	/////////////////////////////////////////////
+	
+	
 	public String login() {
 
 		String forward; // Cadena de texto para navigation-rule en

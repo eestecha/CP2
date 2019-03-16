@@ -1,29 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
-<h:head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>JSF</title>
-</h:head>
-<h:body>
-	<h:form>
-		<h3>usuario y password</h3>
-		<table>
-			<tr>
-				<td>Usuario:</td>
-				<td><h:inputText value="#{user.name}" /></td>
-			</tr>
-			<tr>
-				<td>Password:</td>
-				<td><h:inputSecret value="#{user.password}" /></td>
-			</tr>
+	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>JSF</title>
 
-		</table>
-		<p>
-			<h:commandButton value="Entrar" action="#{user.login}" />
-		</p>
-	</h:form>
-</h:body>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+		
+		<h:outputStylesheet library="css" name="style.css" />
+
+	</h:head>
+
+	<h:body class="mdc-typography">
+
+		<h:form>
+
+			<h2 class="mdc-typography--display2"> 
+				<i class="material-icons"> thumb_up_alt </i>&nbsp;Título de test
+			</h2>
+
+			<p class="mdc-typography--body1">Párrafo de prueba</p>
+
+			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+				<h:inputText class="mdc-text-field__input" id="demo-input-user" value="#{user.name}" />
+				<label for="demo-input-user" class="mdc-floating-label">Name</label>
+			</div>
+			<br />
+
+			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+				<h:inputSecret class="mdc-text-field__input" id="demo-input-pass" value="#{user.password}" />
+				<label for="demo-input-pass" class="mdc-floating-label">Password</label>
+			</div>
+			<br />
+			<br />
+
+			<h:commandButton class="mdc-button mdc-button--raised" value="Entrar" action="#{user.login}" />
+			
+			
+			<button class="mdc-button mdc-button--raised" action="#{user.login()}">
+				<i class="material-icons"> thumb_up_alt </i>
+				&nbsp;Save
+			</button>
+			<br />
+			<br />
+			<br />
+			<hr />
+			<p class="mdc-typography--body1">Ejemplos sencillos para MDC-Web:  
+				<a target="_blank" href="https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial">https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial</a>
+			</p>
+			<p>
+				<a target="_blank" href="http://balusc.omnifaces.org/2011/09/communication-in-jsf-20.html#ImplicitELObjects">RESUMEN jsf-20</a>
+				
+			</p>
+
+		</h:form>
+
+		<!--  -->
+		<ui:fragment rendered="#{not empty flash.msg}">
+		<script>window.location.hash = 'msg';</script>
+		</ui:fragment>
+		<!--  -->
+
+		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"/>
+		<script>mdc.autoInit()</script>
+	</h:body>
+
 </html>
+		

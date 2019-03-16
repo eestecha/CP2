@@ -10,12 +10,14 @@
   SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
    PATH="/index.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="welcome::#views#bienvenido.xhtml"
-    NAME="output" PATH="/views/bienvenido.xhtml"
-    TARGET="rules:#views#bienvenido.xhtml" TITLE="welcome" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="welcome::#views#MoEDTRCD.xhtml"
+    NAME="output" PATH="/views/MoEDTRCD.xhtml"
+    TARGET="rules:#views#MoEDTRCD.xhtml" TITLE="welcome" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#views#bienvenido.xhtml"
   PATH="/views/bienvenido.xhtml" SHAPE="408,96,50,25"
   model-entity="JSFProcessGroup" persistent="true"/>
+ <PROCESS-ITEM NAME="rules:#views#MoEDTRCD.xhtml"
+  PATH="/views/MoEDTRCD.xhtml" SHAPE="448,17,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
