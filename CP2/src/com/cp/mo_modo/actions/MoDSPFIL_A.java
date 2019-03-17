@@ -4,8 +4,6 @@ package com.cp.mo_modo.actions;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.ActionForward;
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
@@ -22,9 +20,7 @@ import net.sf.json.JSONObject;
 
 public class MoDSPFIL_A { //extends org.apache.struts.action.Action {
 	
-	public ActionForward execute(ActionMapping mapping, ActionForm  form,
-			HttpServletRequest request, HttpServletResponse response)
-			throws Exception {
+	public String execute(ActionForm  form, HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		String resultado = "OK";
 		
@@ -57,7 +53,8 @@ public class MoDSPFIL_A { //extends org.apache.struts.action.Action {
 
 			if (isVersionAngular) { Subrutinas.returnActionVersionAngular(request, response, this, false, null); return null; } // No navega con struts
 
-			return mapping.findForward(resultado);
+//			return mapping.findForward(resultado);
+			return resultado;
 		}
 
 		/////////////////////////
@@ -121,7 +118,8 @@ public class MoDSPFIL_A { //extends org.apache.struts.action.Action {
 		}
 		//////////////////////////////////////
 
-		return mapping.findForward(resultado);
+//		return mapping.findForward(resultado);
+		return resultado;
 	}
 	
 	private String cargarPantalla( HttpServletRequest request, ActionForm  form ) {

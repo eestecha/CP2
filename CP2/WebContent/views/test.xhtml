@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Entrada</title>
+</h:head>
+<h:body>
+
+			<h:form method="POST">
+
+			<h1>Bienvenido pollo #{user.name}</h1>
+
+			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+				<h:inputText class="mdc-text-field__input" id="demo-input-user" value="#{user.name}" />
+				<label for="demo-input-user" class="mdc-floating-label">Name</label>
+			</div>
+
+			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+				<h:inputSecret class="mdc-text-field__input" id="demo-input-pass" value="#{user.password}" />
+				<label for="demo-input-pass" class="mdc-floating-label">Password</label>
+			</div>
+
+			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+				<h:inputText class="mdc-text-field__input" id="demo-input-favNumber1" value="#{user.favNumber1}" />
+				<label for="demo-input-favNumber1" class="mdc-floating-label">favNumber1</label>
+			</div>
+
+			<h:commandButton class="mdc-button mdc-button--raised" value="Entrar" action="#{user.login}" />
+	
+			<br />
+			<div>#{user.pedito()}</div>
+			<br />
+
+			<button class="mdc-button mdc-button--raised">
+				&nbsp;No es un submit
+			</button>
+
+		</h:form>
+
+</h:body>
+</html>

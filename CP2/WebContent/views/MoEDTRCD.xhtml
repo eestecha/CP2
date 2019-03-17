@@ -5,40 +5,91 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 	<h:head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>MoEDTRCD</title>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
+
+		<h:outputStylesheet library="css" name="style.css" />
 	</h:head>
 	<h:body>
-	
-		<div name="MoEDTRCD_form"
-			style="border-style: solid; border-color: silver; border-width: 1px;">
+
+		<h:form name="MoEDTRCD_form" style="border-style: solid; border-color: silver; border-width: 10px;">
 			<div class="modal-header">
-				<ul>
+
 					<!-- <li>logon_USR &nbsp; {{actionForm.logon_USR}}</li> -->
 					<h4 class="modal-title">Modificar: modo</h4>
+
+					<h:button class="mdc-button mdc-button--raised" value="#{logon_USR}" outcome="login" />	
+					
 					<br />
-	
-					<md-input-container> <label>id_modo</label> 
-						<input type="text" ng-model="actionForm.mo_id_modo" /> 
-					</md-input-container>
-					<md-input-container> <label>colectivo</label> 
-						<input type="text" ng-model="actionForm.mo_colectivo" /> 
-					</md-input-container>
-					<md-input-container> <label>mo_nombre</label> 
-					<input type="text" ng-model="actionForm.mo_mo_nombre" /> 
-						</md-input-container>
-					<md-input-container> <label>json</label> 
-						<input type="text" ng-model="actionForm.mo_json" /> 
-					</md-input-container>
-	
-				</ul>
+
+					<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+						<h:inputText class="mdc-text-field__input" id="input-logon_USR" value="#{MoRCD_AF.logon_USR}" />
+						<label for="input-logon_USR" class="mdc-floating-label">logon_USR</label>
+					</div>
+
+					<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+						<h:inputText class="mdc-text-field__input" id="input-id_modo" value="#{MoRCD_AF.mo_id_modo}" />
+						<label for="input-id_modo" class="mdc-floating-label">id_modo</label>
+					</div>
+
+					<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+						<h:inputText class="mdc-text-field__input" id="input-colectivo" value="#{MoRCD_AF.mo_colectivo}" />
+						<label for="input-colectivo" class="mdc-floating-label">colectivo</label>
+					</div>
+
+					<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+						<h:inputText class="mdc-text-field__input" id="input-mo_nombre" value="#{MoRCD_AF.mo_mo_nombre}" />
+						<label for="input-mo_nombre" class="mdc-floating-label">mo_nombre</label>
+					</div>
+
+					<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+						<h:inputText class="mdc-text-field__input" id="input-mo_json" value="#{MoRCD_AF.mo_json}" />
+						<label for="input-mo_json" class="mdc-floating-label">mo_json</label>
+					</div>
+
 			</div>
 			<div class="modal-footer">
+
+			<h:commandButton class="mdc-button mdc-button--raised" value="Submit formulario" action="#{MoRCD_AF.dspfil}" />
+			&nbsp;			
+			<h:button class="mdc-button mdc-button--raised" value="Ir a test" outcome="test" />	
+			
+			
+<h:dataTable value="#{MoRCD_AF.grid}" var="_row">
+
+  <h:column>
+    <f:facet name="header"><h:outputText value="id_modo" /></f:facet>
+    <h:outputText value="#{_row.mo_id_modo}" />
+  </h:column>
+
+  <h:column>
+    <f:facet name="header"><h:outputText value="mo_mo_nombre" /></f:facet>
+    #{_row.mo_mo_nombre}
+  </h:column>
+
+  <h:column>
+    <f:facet name="header"><h:outputText value="mo_colectivo" /></f:facet>
+    #{_row.mo_colectivo}
+  </h:column>
+
+</h:dataTable>			
+			
+			
+<!-- 			
 				<input type="button" class="btn btn-danger" data-dismiss="modal"
 					value="Suprimir" ng-click="suprimir()" /> <input type="button"
 					class="btn btn-warning" data-dismiss="modal" value="Copiar"
 					ng-click="copiar()" /> <input type="button" class="btn btn-primary"
 					data-dismiss="modal" value="Aceptar" ng-click="cambiar()" />
+ -->
 			</div>
-		</div>
-	
+
+		</h:form>
+
+		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"/>
+		<script>mdc.autoInit()</script>
 	</h:body>
 </html>

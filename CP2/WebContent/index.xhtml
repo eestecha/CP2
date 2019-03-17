@@ -17,45 +17,50 @@
 
 	<h:body class="mdc-typography">
 
-		<h:form>
+		<h:form method="POST">
 
 			<h2 class="mdc-typography--display2"> 
 				<i class="material-icons"> thumb_up_alt </i>&nbsp;Título de test
 			</h2>
 
-			<p class="mdc-typography--body1">Párrafo de prueba</p>
-
 			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
 				<h:inputText class="mdc-text-field__input" id="demo-input-user" value="#{user.name}" />
 				<label for="demo-input-user" class="mdc-floating-label">Name</label>
 			</div>
+
 			<br />
 
 			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
 				<h:inputSecret class="mdc-text-field__input" id="demo-input-pass" value="#{user.password}" />
 				<label for="demo-input-pass" class="mdc-floating-label">Password</label>
 			</div>
-			<br />
+
 			<br />
 
-			<h:commandButton class="mdc-button mdc-button--raised" value="Entrar" action="#{user.login}" />
-			
-			
-			<button class="mdc-button mdc-button--raised" action="#{user.login()}">
-				<i class="material-icons"> thumb_up_alt </i>
-				&nbsp;Save
-			</button>
-			<br />
-			<br />
-			<br />
-			<hr />
-			<p class="mdc-typography--body1">Ejemplos sencillos para MDC-Web:  
-				<a target="_blank" href="https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial">https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial</a>
+			<div class="mdc-text-field" data-mdc-auto-init="MDCTextField">
+				<h:inputText class="mdc-text-field__input" id="demo-input-favNumber1" value="#{user.favNumber1}" />
+				<label for="demo-input-favNumber1" class="mdc-floating-label">favNumber1</label>
+			</div>
+
+			<br /><br />
+
+			<h:commandButton class="mdc-button mdc-button--raised" value="Submit formulario" action="#{user.login}" />
+
+			<br /><br /><br /><br />
+			<p>
+				<a target="_blank" href="https://docs.oracle.com/javaee/6/tutorial/doc/gkiow.html">Oracle - The Java EE 6 Tutorial - Chapter 11 - Using Ajax with JavaServer Faces Technology</a>
+			</p>
+			<p>
+				<a target="_blank" href="https://github.com/material-components/material-components-web/tree/master/packages">REFERENCE: MDC-Web Material Design Components for Web</a>
+			</p>
+			<p class="mdc-typography--body1">  
+				<a target="_blank" href="https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial">Getting started with Material Components for the Web (MDC-Web)</a>
 			</p>
 			<p>
 				<a target="_blank" href="http://balusc.omnifaces.org/2011/09/communication-in-jsf-20.html#ImplicitELObjects">RESUMEN jsf-20</a>
-				
 			</p>
+			
+			
 
 		</h:form>
 

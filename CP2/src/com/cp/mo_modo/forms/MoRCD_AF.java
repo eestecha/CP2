@@ -1,10 +1,21 @@
 package com.cp.mo_modo.forms;
 
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.cp._comun.ActionForm;
 import com.cp._comun.StBean;
+import com.cp.mo_modo.actions.MoDSPFIL_A;
 import com.cp.mo_modo.bean.MoBean;
 import com.cp.mo_modo.bean.MoBeanFiltro;
 
+@ManagedBean(name = "MoRCD_AF")
+@ViewScoped
 public class MoRCD_AF extends ActionForm {
     public static final long serialVersionUID = 1L; // Para evitar "warning: [serial] serializable class..."
 
@@ -36,6 +47,19 @@ public class MoRCD_AF extends ActionForm {
 	public String mo_mo_nombre; // mo_nombre
 	public String mo_json; // json
     
+	public void dspfil() {
+		MoDSPFIL_A dspfil = new MoDSPFIL_A();
+		
+		HttpServletRequest request = (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext().getRequest();
+		HttpServletResponse response = (HttpServletResponse) FacesContext.getCurrentInstance().getExternalContext().getResponse();
+
+		try {
+			dspfil.execute(this, request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
 
     public MoRCD_AF() {
 	super();

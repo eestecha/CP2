@@ -1,5 +1,7 @@
 package com.cp._comun;
 
-public abstract class ActionForm {
+import java.io.Serializable;
+
+public abstract class ActionForm implements Serializable {
 
 }
