@@ -69,6 +69,13 @@
 			<version>4.7.0</version>
 		</dependency>
 
+		<!-- PrimeFaces 2016 -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>6.1</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
