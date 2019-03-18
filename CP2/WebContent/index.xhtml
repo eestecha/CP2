@@ -5,13 +5,14 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
 	<h:head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>JSF</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" />
-		
-		<h:outputStylesheet library="css" name="style.css" />
+		<link rel="icon" href="./resources/images/aprobar.png" />
+		<link rel="stylesheet" href="./resources/css/icon.css?family=Material+Icons" />
+
+		<h:outputStylesheet library="css" name="material-components-web.min.css" />
+		<h:outputStylesheet library="css" name="main_style.css" />
 
 	</h:head>
 
@@ -46,23 +47,21 @@
 
 			<h:commandButton class="mdc-button mdc-button--raised" value="Submit formulario" action="#{user.login}" />
 
-			<br /><br /><br /><br />
-			<p>
-				<a target="_blank" href="https://docs.oracle.com/javaee/6/tutorial/doc/gkiow.html">Oracle - The Java EE 6 Tutorial - Chapter 11 - Using Ajax with JavaServer Faces Technology</a>
-			</p>
-			<p>
-				<a target="_blank" href="https://github.com/material-components/material-components-web/tree/master/packages">REFERENCE: MDC-Web Material Design Components for Web</a>
-			</p>
-			<p class="mdc-typography--body1">  
-				<a target="_blank" href="https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial">Getting started with Material Components for the Web (MDC-Web)</a>
-			</p>
-			<p>
-				<a target="_blank" href="http://balusc.omnifaces.org/2011/09/communication-in-jsf-20.html#ImplicitELObjects">RESUMEN jsf-20</a>
-			</p>
-			
-			
-
 		</h:form>
+
+		<br /><br /><br /><br />
+		<p>
+			<a target="_blank" href="https://docs.oracle.com/javaee/6/tutorial/doc/gkiow.html">Oracle - The Java EE 6 Tutorial - Chapter 11 - Using Ajax with JavaServer Faces Technology</a>
+		</p>
+		<p>
+			<a target="_blank" href="https://github.com/material-components/material-components-web/tree/master/packages">REFERENCE: MDC-Web Material Design Components for Web</a>
+		</p>
+		<p class="mdc-typography--body1">  
+			<a target="_blank" href="https://fastfoodcoding.com/courses/material-components-for-the-web-tutorial">Getting started with Material Components for the Web (MDC-Web)</a>
+		</p>
+		<p>
+			<a target="_blank" href="http://balusc.omnifaces.org/2011/09/communication-in-jsf-20.html#ImplicitELObjects">RESUMEN jsf-20</a>
+		</p>
 
 		<!--  -->
 		<ui:fragment rendered="#{not empty flash.msg}">
@@ -70,7 +69,7 @@
 		</ui:fragment>
 		<!--  -->
 
-		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"/>
+		<script src="./resources/js/material-components-web.min.js" />
 		<script>mdc.autoInit()</script>
 	</h:body>
 

@@ -2,12 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	>
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>Entrada</title>
 </h:head>
 <h:body>
+
+	<p:layout style="min-width:400px;min-height:200px;">
+		<p:layoutUnit position="west" resizable="true" size="150" minSize="40"
+			maxSize="200">
+			<p:graphicImage name="images/anular.png" />
+		</p:layoutUnit>
+		<p:layoutUnit position="center">
 
 			<h:form method="POST">
 
@@ -34,11 +43,13 @@
 			<div>#{user.pedito()}</div>
 			<br />
 
-			<button class="mdc-button mdc-button--raised">
-				&nbsp;No es un submit
-			</button>
+			<h:button class="mdc-button mdc-button--raised" outcome="login" value="&nbsp;No es un submit" />
 
 		</h:form>
+
+		</p:layoutUnit>
+	</p:layout>
+
 
 </h:body>
 </html>

@@ -1,5 +1,6 @@
 package com.cp._comun;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 
 import net.sf.json.JSONObject;
@@ -8,7 +9,7 @@ import net.sf.json.JSONObject;
  * @author Emilio Estecha 2013
  *
  */
-abstract public class StBean extends Object {
+abstract public class StBean extends Object implements Serializable{
 
 	private String chg;
 

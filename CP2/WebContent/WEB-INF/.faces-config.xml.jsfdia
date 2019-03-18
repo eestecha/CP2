@@ -7,19 +7,19 @@
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#index.xhtml" PATH="/index.xhtml"
-  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  SHAPE="104,104,50,41" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
    PATH="/index.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="OK::#views#MoEDTRCD.xhtml" NAME="output"
-    PATH="/views/MoEDTRCD.xhtml" TARGET="rules:#views#MoEDTRCD.xhtml"
+   <PROCESS-ITEM-OUTPUT ID="OK::#views#MoDSPFIL.xhtml" NAME="output"
+    PATH="/views/MoDSPFIL.xhtml" TARGET="rules:#views#MoDSPFIL.xhtml"
     TITLE="OK" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#views#bienvenido.xhtml"
-  PATH="/views/bienvenido.xhtml" SHAPE="568,32,50,25"
+  PATH="/views/bienvenido.xhtml" SHAPE="64,264,50,25"
   model-entity="JSFProcessGroup" persistent="true"/>
  <PROCESS-ITEM NAME="rules:#views#MoEDTRCD.xhtml"
-  PATH="/views/MoEDTRCD.xhtml" SHAPE="416,24,50,41" model-entity="JSFProcessGroup">
+  PATH="/views/MoEDTRCD.xhtml" SHAPE="192,176,50,41" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#views#MoEDTRCD.xhtml:0" NAME="item"
    PATH="/views/MoEDTRCD.xhtml" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT ID="test::#views#test.xhtml" NAME="output"
@@ -28,5 +28,7 @@
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#views#test.xhtml" PATH="/views/test.xhtml"
-  SHAPE="656,33,0,0" model-entity="JSFProcessGroup"/>
+  SHAPE="296,256,50,25" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#views#MoDSPFIL.xhtml"
+  PATH="/views/MoDSPFIL.xhtml" SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

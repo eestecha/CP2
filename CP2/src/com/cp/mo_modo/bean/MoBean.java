@@ -5,6 +5,8 @@ import com.cp._comun._K;
 
 public class MoBean extends StBean {
 
+	private static final long serialVersionUID = 2970785043558791286L;
+
 	public String mo_id_modo; // id_modo
 	public String mo_colectivo; // colectivo
 	public String mo_mo_nombre; // mo_nombre
